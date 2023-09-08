@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>获奖名单:</h1>
+		<h2>一等奖：<span id = 'one'>?</span></h2>
+		<h3>二等奖：<span id = 'two'>?</span></h3>
+		<h4>三等奖：<span id = 'three'>?</span></h4>
+		
+		<script>
+			const arr = ['嬴政','刘邦','曹操','孙权','刘备','司马懿','苻坚','杨广','李世民','赵匡胤']
+			
+			function getLuckier(str){
+				const urandom = Math.floor(Math.random() * arr.length)
+				document.querySelector(str).innerText = `${arr[urandom]}`
+				arr.splice(urandom,1)
+			}
+			
+			getLuckier('#one')
+			getLuckier('#two')
+			getLuckier('#three')
+
+				// const ufirst = Math.floor(Math.random() * arr.length)
+				// document.querySelector('#one').innerText = `${arr[ufirst]}`
+				// arr.splice(ufirst,1)
+				
+				// const usecond = Math.floor(Math.random() * arr.length)
+				// document.querySelector('#two').innerText = `${arr[usecond]}`
+				// arr.splice(usecond,1)
+				
+				// const uthird = Math.floor(Math.random() * arr.length)
+				// document.querySelector('#three').innerText = `${arr[uthird]}`
+				// arr.splice(uthird,1)
+				
+		</script>
+	</body>
+</html>

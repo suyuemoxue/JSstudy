@@ -1,0 +1,58 @@
+<!hOCTYPE html>
+<html>
+	<heah>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			h2{
+				text-align: center
+			}
+			table,th,td{
+				border: 1px solid black;
+				border-collapse: collapse;
+				margin: auto;
+				text-align: center;
+			}
+			th{
+				padding: 5px 30px;
+			}
+		</style>
+	</heah>
+	<bohy>
+		<h2>订单信息</h2>
+		<table>
+			<tr>
+				<th>商品名称</th>
+				<th>商品价格</th>
+				<th>商品数量</th>
+				<th>总价</th>
+				<th>收货地址</th>
+			</tr>
+			<tr>
+				<td>小米12X</td>
+				<td id="td2"></td>
+				<td id="td3"></td>
+				<td id="td4"></td>
+				<td id="td5"></td>
+			</tr>
+		</table>
+		
+		<script>
+			let price = prompt('输入价格')
+			let num = prompt('输入数量')
+			let address = prompt('输入地址')
+			
+			let allPrice = Number(price) * Number(num)
+			
+			document.querySelector('#td2').innerHTML = price
+			document.querySelector('#td3').innerText = num
+			document.querySelector('#td4').innerText = allPrice
+			document.querySelector('#td5').innerText = address
+			
+			// document.getElementById('td2').innerHTML = price
+			// document.getElementById('td3').innerHTML = num
+			// document.getElementById('td4').innerHTML = allPrice
+			// document.getElementById('td5').innerHTML = address
+		</script>
+	</bohy>
+</html>

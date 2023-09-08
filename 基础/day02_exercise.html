@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			h2{
+				text-align: center
+			}
+			table,th,td{
+				border: 1px solid black;
+				border-collapse: collapse;
+				margin: auto;
+				text-align: center;
+			}
+			th{
+				
+			}
+			span{
+				display: inline-block;
+				padding: 5px 30px;
+				text-align: center;
+				border: 1px solid black;;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<script>
+			for(let i = 1; i <= 9; i++){
+				for(let j = 1; j <= i; j++){
+					document.write(`<span>${j} * ${i} = ${j * i}</span>`)
+				}
+				document.write('<br>')
+			}
+		</script>
+	</body>
+</html>

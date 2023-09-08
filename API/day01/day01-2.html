@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.box{
+				width: 200px;
+				height: 200px;				
+				background-color: aqua;
+			}
+			.act1{
+				color: blue;
+			}
+			.act2{
+				border: 2px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<input class="a1" type="text" value="123"><br><br>
+		<input class="a2" name="Checkbox" type="checkbox"><br><br>
+		<input class="a3" type="button" value="点击"><br><br>
+		
+		<div data-id="1" data-spm="啊啊">1</div>
+		<div data-id="2">2</div>
+		<div data-id="3">3</div>
+		<div data-id="4">4</div>
+		<div data-id="5">5</div>
+		
+		<div class="box">啊啊啊啊啊</div>
+		<script>
+			const div = document.querySelector('.box')
+			div.classList.add('act1')
+			// div.classList.remove('box')
+			div.classList.toggle('act2')
+			
+			const inpu = document.querySelector('.a1')
+			inpu.value = 'qqqq'
+			
+			const ic = document.querySelector('.a2')
+			ic.checked = true
+			
+			const ib = document.querySelector('.a3')
+			ib.disabled = true
+			
+			const di = document.querySelector('div')
+			console.log(di.dataset)
+			document.write(di.dataset.id)
+			document.write(di.dataset.spm)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//生成随机颜色
+			let flag = true
+			function getRandomColor(flag){
+				if(flag == true || flag == undefined){ //如果参数为true或无参数，则生成16进制的颜色
+					let slColor = '#' //等待拼接
+					let arr = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f']
+					for(let i = 1; i <= 6; i++){ //16进制颜色有6位
+						let num = Math.floor(Math.random() * arr.length)
+						slColor += arr[num] //拼接
+					}
+					return `${slColor}`
+				}
+				if(flag == false){ //如果参数为false，则生成一个随机RGB颜色
+					let r = parseInt(Math.random() * 256)
+					let g = parseInt(Math.random() * 256)
+					let b = parseInt(Math.random() * 256)
+					return `rgb(${r},${g},${b})`
+				}		
+			}
+			let rcolor1 = getRandomColor(true)
+			document.write(rcolor1 + '<br>')
+			document.write(`<h1 style="color: ${rcolor1};">我会变色1</h1>`)
+			
+			let rcolor2 = getRandomColor(false)
+			document.write(rcolor2)
+			document.write(`<h1 style="color: ${rcolor2};">我会变色2</h1>`)
+		</script>
+	</body>
+</html>
